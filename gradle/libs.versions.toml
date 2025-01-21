@@ -10,6 +10,8 @@ ktorClientCore = "3.0.0"
 navigationCompose = "2.7.0-alpha07"
 androidx-lifecycle = "2.8.3"
 sqldelight-runtime = "1.5.5"
+voyantNavigationCompose = "0.0.9"
+serialization = "2.1.0"
 
 [libraries]
 navigation-compose = { module = "org.jetbrains.androidx.navigation:navigation-compose", version.ref = "navigationCompose" }
@@ -24,6 +26,7 @@ compose-material3 = { module = "androidx.compose.material3:material3-android", v
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
 ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktorClientCore" }
 sqldelight = { module = "com.squareup.sqldelight:runtime", version.ref = "sqldelight-runtime" }
+voyant-navigation-compose = { module = "io.github.kashif-mehmood-km:voyant-navigation-compose", version.ref = "voyantNavigationCompose" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
@@ -33,3 +36,4 @@ kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref =
 kotlinCocoapods = { id = "org.jetbrains.kotlin.native.cocoapods", version.ref = "kotlin" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 jetbrainsCompose = { id = "org.jetbrains.compose", version.ref = "compose-plugin" }
+serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "serialization" }

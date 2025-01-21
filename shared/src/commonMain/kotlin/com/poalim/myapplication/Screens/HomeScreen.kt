@@ -9,18 +9,27 @@ import androidx.navigation.NavController
 import androidx.compose.material3.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.poalim.myapplication.Navigation.Screen
+import com.kashif.voyant_navigation_compose.VoyantRoute
+import com.kashif.voyant_navigation_compose.navigateX
 import kotlinx.coroutines.sync.Mutex
+import kotlinx.serialization.Serializable
 
-@Composable
-fun HomeScreen (navController: NavController) {
-    Column (Modifier.padding(20.dp)) {
-        Spacer(Modifier.height(50.dp))
-        Text("Home Screen")
-        Button(onClick = {
-            navController.navigate(route = Screen.Details.route)
-        }) {
-            Text("Go to Details")
-        }
+@Serializable
+object HomeScreen: VoyantRoute {
+    @Composable
+    override fun content(navController: NavController) {
+        Scaffold(
+            content = {
+                Column(Modifier.padding(20.dp)) {
+                    Spacer(Modifier.height(50.dp))
+                    Text("Home Screen")
+                    Button(onClick = {
+                        navController.navigateX(DetailsScreen)
+                    }) {
+                        Text("Go to Details")
+                    }
+                }
+            }
+        )
     }
 }
